@@ -8,7 +8,7 @@ body {
     transition: background 0.3s, color 0.3s; */
 }
 body {
-    background: url('images/img.avif') no-repeat center center fixed;
+    background: url('images/img.jpeg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
 }
