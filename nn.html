@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Q&A Section</title>
+    <script>
+        async function askQuestion() {
+            let userQuestion = document.getElementById("userQuestion").value;
+            let responseBox = document.getElementById("response");
+
+            responseBox.innerHTML = "Thinking...";
+
+            const response = await fetch("https://api.openai.com/v1/chat/completions", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer YOUR_OPENAI_API_KEY"
+                },
+                body: JSON.stringify({
+                    model: "gpt-4",
+                    messages: [{role: "user", content: userQuestion}]
+                })
+            });
+
+            const data = await response.json();
+            responseBox.innerHTML = data.choices[0].message.content;
+        }
+    </script>
+</head>
+<body>
+    <h2>Ask a Question</h2>
+    <input type="text" id="userQuestion" placeholder="Type your question..." />
+    <button onclick="askQuestion()">Ask</button>
+    <p id="response"></p>
+</body>
+</html>

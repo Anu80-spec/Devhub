@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | DevHub</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">DevHub</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="course.html">Courses</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        <button id="dark-mode-toggle">🌙</button>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About DevHub</h2>
+        <p>DevHub is your ultimate destination for web development education. We provide a collection of free courses via YouTube links and paid courses from top institutes, making learning accessible for everyone.</p>
+    </section>
+
+    <!-- Free Courses Section -->
+    <section class="free-courses">
+        <h2>Free Web Development Courses</h2>
+        <div class="course-list">
+            <div class="course">
+                <h3>HTML & CSS Basics</h3>
+                <a href="https://www.youtube.com/playlist?list=PLfqMhTWNBTe0PY9xunOzsP5kmYIz2Hu7i" target="_blank">Watch on YouTube</a>
+            </div>
+            <div class="course">
+                <h3>JavaScript for Beginners</h3>
+                <a href="https://youtube.com/example-js" target="_blank">Watch on YouTube</a>
+            </div>
+            <div class="course">
+                <h3>Full-Stack Web Development</h3>
+                <a href="https://youtube.com/example-fullstack" target="_blank">Watch on YouTube</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paid Courses Section -->
+    <section class="paid-courses">
+        <h2>Paid Web Development Courses</h2>
+        <div class="course-list">
+            <div class="course">
+                <h3>Advanced React Development</h3>
+                <p>Offered by: Coursera</p>
+                <a href="https://coursera.org/example-react" target="_blank">View Course</a>
+            </div>
+            <div class="course">
+                <h3>Node.js & Express Masterclass</h3>
+                <p>Offered by: Udemy</p>
+                <a href="https://udemy.com/example-nodejs" target="_blank">View Course</a>
+            </div>
+            <div class="course">
+                <h3>Full-Stack Bootcamp</h3>
+                <p>Offered by: Harvard CS50</p>
+                <a href="https://cs50.harvard.edu/web/" target="_blank">View Course</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Feature -->
+    <section class="search">
+        <h2>Find Your Course</h2>
+        <input type="text" id="search-bar" placeholder="Search for courses...">
+        <div id="search-results"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 DevHub. All rights reserved.</p>
+    </footer>
+
+    <script src="about.js"></script>
+</body>
+</html>
+

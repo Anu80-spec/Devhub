@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll Now</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dac4e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .enroll-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+        .enroll-container h2 {
+            text-align: center;
+            
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .enroll-btn {
+            width: 100%;
+            padding: 10px;
+            background: #9f79aa;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .enroll-btn:hover {
+            background: #876591;
+        }
+    </style>
+    <script>
+        function showMessage(event) {
+            event.preventDefault(); // Prevent form submission
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            if (name && email) {
+                alert(`Thank you for enrolling, ${name}! We will send you course details on ${email}.`);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="enroll-container">
+        <h2>Enroll Now</h2>
+        <form onsubmit="showMessage(event)">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="course">Select Course</label>
+                <select id="course" name="course">
+                    <option value="HTML & CSS basics">HTML & CSS basics</option>
+                    <option value="javascript full course">javascript full course</option>
+                    <option value="Front-End Frameworks">Front-End Frameworks</option>
+                    <option value=" Full Stack Development "> Full Stack Development</option>
+                    <option value="  Back-End course ">Back-End course </option>
+                    <option value=" Python for Web  ">Python for Web </option>
+                    <option value=" PHP & MySQL  ">PHP & MySQL </option>
+                    <option value=" WordPress Development  ">WordPress Development </option>
+                    <option value="  UI/UX Design "> UI/UX Design</option>
+                    <option value="  DevOps & Cloud Computing ">DevOps & Cloud Computing </option>
+                </select>
+            </div>
+            <button type="submit" class="enroll-btn">Enroll Now</button>
+        </form>
+    </div>
+</body>
+</html>
